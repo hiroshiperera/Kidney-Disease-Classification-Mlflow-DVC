@@ -1,3 +1,5 @@
+
+#Project details, version, about the author those details are there
 import setuptools
 
 with open("REASME.md", "r", encoding="utf-8") as f:
@@ -20,5 +22,6 @@ setuptools.setup(
     Long_description = long_description,
     Long_description_content = "text/markdown",
     url = f"https://giithub.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
-
+    package_dir = {"": "src"},
+    packages=setuptools.find_packages(where="src")
 )
